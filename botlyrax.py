@@ -2,9 +2,9 @@ import os
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 
-from chatterbot2 import ChatBot
-from chatterbot2.trainers import ChatterBotCorpusTrainer
-from chatterbot2.trainers import ListTrainer
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.trainers import ListTrainer
 
 
 # Auth token

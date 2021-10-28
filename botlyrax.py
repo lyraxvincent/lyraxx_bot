@@ -8,9 +8,25 @@ from chatterbot.trainers import ListTrainer
 
 
 # Auth token
-TOKEN = str(os.environ['TOKEN_KEY'])
+TOKEN = '2068460105:AAGLEWGbKoCgJkle2Lp6VVpZuGF4dw8jEuU'#str(os.environ['TOKEN_KEY'])
 
-chatbot = ChatBot('lyrax')
+chatbot = ChatBot(
+    'lyrax',
+    logic_adapters=[
+        {
+            "import_path": "chatterbot.logic.BestMatch"
+        },
+
+        {
+            'import_path': 'chatterbot.logic.TimeLogicAdapter'
+        },
+
+        {
+            'import_path': 'chatterbot.logic.MathematicalEvaluation'
+        }
+
+    ]
+)
 
 # Create a new trainer for the chatbot
 trainer = ChatterBotCorpusTrainer(chatbot)

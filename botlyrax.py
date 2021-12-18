@@ -8,7 +8,7 @@ from chatterbot.trainers import ListTrainer
 
 
 # Auth token
-TOKEN = '2068460105:AAGLEWGbKoCgJkle2Lp6VVpZuGF4dw8jEuU'#str(os.environ['TOKEN_KEY'])
+TOKEN = str(os.environ['TOKEN_KEY'])
 
 chatbot = ChatBot(
     'lyrax',
